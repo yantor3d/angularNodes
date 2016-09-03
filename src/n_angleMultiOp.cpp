@@ -116,7 +116,7 @@ MStatus AngleMultiOpNode::compute(const MPlug& plug, MDataBlock& data)
             break;
 
         case PRODUCT:
-            result = std::accumulate(inputs.begin(), inputs.end(), 0.0, std::multiplies<double>());
+            result = std::accumulate(inputs.begin(), inputs.end(), 1.0, std::multiplies<double>());
             break;
 
         case MIN_:
