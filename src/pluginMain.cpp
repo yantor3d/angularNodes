@@ -54,11 +54,11 @@ MString AngleMultiOpNode::kNODE_NAME =      "angleMultiOp";
 MString AngleScalarOpNode::kNODE_NAME =     "angleScalarOp";
 MString AngleUnaryOpNode::kNODE_NAME =      "angleUnaryOp";
 
-MTypeId ClampAngleNode::kNODE_ID =          0x00126b10;
-MTypeId AngleBinaryOpNode::kNODE_ID =       0x00126b11;
-MTypeId AngleMultiOpNode::kNODE_ID =        0x00126b12;
-MTypeId AngleScalarOpNode::kNODE_ID =       0x00126b13;
-MTypeId AngleUnaryOpNode::kNODE_ID =        0x00126b14;
+MTypeId ClampAngleNode::kNODE_ID =          0x00126b11;
+MTypeId AngleBinaryOpNode::kNODE_ID =       0x00126b12;
+MTypeId AngleMultiOpNode::kNODE_ID =        0x00126b13;
+MTypeId AngleScalarOpNode::kNODE_ID =       0x00126b14;
+MTypeId AngleUnaryOpNode::kNODE_ID =        0x00126b15;
 
 #define REGISTER_NODE(NODE)                    \
     status = fnPlugin.registerNode(            \
