@@ -34,11 +34,11 @@ These nodes operation on doubleAngle values as inputs and outputs, eliminating
 the need for a unit conversion node in most cases.
 */
 
-#include "n_anglebinaryop.h"
-#include "n_anglemultiop.h"
-#include "n_anglescalarop.h"
-#include "n_angleunaryop.h"
-#include "n_clampangle.h"
+#include "n_angleBinaryOp.h"
+#include "n_angleMultiOp.h"
+#include "n_angleScalarOp.h"
+#include "n_angleUnaryOp.h"
+#include "n_clampAngle.h"
 
 #include <maya/MFnPlugin.h>
 #include <maya/MTypeId.h>

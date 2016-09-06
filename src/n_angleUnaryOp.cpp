@@ -19,6 +19,7 @@ You may use, distribute, or modify this code under the terms of the MIT license.
 #include "node.h"
 
 #include <algorithm>
+#include <math.h>
 
 #include <maya/MAngle.h>
 #include <maya/MDataHandle.h>
@@ -109,15 +110,15 @@ MStatus AngleUnaryOpNode::compute(const MPlug& plug, MDataBlock& data)
             break;
 
         case RECIPROCAL: 
-            result = input == 0.0 ? FLT_MAX : 1.0 / input; 
+            result = input == 0.0 ? 10000.0 : 1.0 / input; 
             break;
 
         case FLOOR: 
-            result = floor(input); 
+            result = std::floor(input); 
             break;
 
         case CEILING: 
-            result = ceil(input); 
+            result = std::ceil(input); 
             break;
     }
 

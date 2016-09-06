@@ -18,6 +18,8 @@ You may use, distribute, or modify this code under the terms of the MIT license.
 #include "n_angleScalarOp.h"
 #include "node.h"
 
+#include <math.h>
+
 #include <maya/MAngle.h>
 #include <maya/MDataHandle.h>
 #include <maya/MFnEnumAttribute.h>
@@ -113,11 +115,11 @@ MStatus AngleScalarOpNode::compute(const MPlug& plug, MDataBlock& data)
             break;
 
         case DIVIDE:
-            result = input2 == 0.0 ? FLT_MAX : input1 / input2;
+            result = input2 == 0.0 ? 100000.0 : input1 / input2;
             break;
 
         case POWER:
-            result = pow(input1, input2);
+            result = std::pow(input1, input2);
             break;
     }
 
