@@ -119,7 +119,7 @@ MStatus AngleScalarOpNode::compute(const MPlug& plug, MDataBlock& data)
             break;
 
         case POWER:
-            result = std::pow(input1, input2);
+            result = pow(input1, input2);
             break;
     }
 

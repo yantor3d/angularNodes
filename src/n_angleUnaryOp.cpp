@@ -114,11 +114,11 @@ MStatus AngleUnaryOpNode::compute(const MPlug& plug, MDataBlock& data)
             break;
 
         case FLOOR: 
-            result = std::floor(input); 
+            result = floor(input); 
             break;
 
         case CEILING: 
-            result = std::ceil(input); 
+            result = ceil(input); 
             break;
     }
 
