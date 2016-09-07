@@ -24,6 +24,7 @@ You may use, distribute, or modify this code under the terms of the MIT license.
 #include <maya/MDataHandle.h>
 #include <maya/MFnEnumAttribute.h>
 #include <maya/MFnNumericAttribute.h>
+#include <maya/MFnNumericData.h>
 #include <maya/MFnUnitAttribute.h>
 #include <maya/MPlug.h>
 #include <maya/MPxNode.h>
@@ -49,16 +50,17 @@ MStatus AngleScalarOpNode::initialize()
 {
     MStatus status;
 
-    MFnUnitAttribute u;
     MFnEnumAttribute e;
+    MFnNumericAttribute n;
+    MFnUnitAttribute u;
 
     aInput = u.create("input", "i", MFnUnitAttribute::kAngle, 0.0, &status);
     __CHECK_STATUS(status);
     MAKE_INPUT_ATTR(u);
 
-    aScalar = u.create("scalar", "sc", MFnUnitAttribute::kAngle, 0.0, &status);
+    aScalar = n.create("scalar", "sc", MFnNumericData::kDouble, 0.0, &status);
     __CHECK_STATUS(status);
-    MAKE_INPUT_ATTR(u);
+    MAKE_INPUT_ATTR(n);
 
     aOperation = e.create("operation", "op", ADD, &status);
     __CHECK_STATUS(status);
