@@ -3,3 +3,11 @@ Maya plugin with nodes for performing calculates on doubleAngle values without p
 
 #### Description
 See the [Wiki](https://github.com/yantor3d/angularNodes/wiki) for full details.
+
+## Plugin Contents
+### Nodes
+- angleBinaryOp
+- angleMultiOp
+- angleScalarOp
+- angleUnaryOp
+- clampAngle
