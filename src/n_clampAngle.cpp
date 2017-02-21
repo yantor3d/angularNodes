@@ -9,6 +9,8 @@ You may use, distribute, or modify this code under the terms of the MIT license.
 // Restricts the value of an input angle to between a minimum and maximum value.
 //-----------------------------------------------------------------------------
 
+#define NOMINMAX
+
 #include "n_clampAngle.h"
 #include "node.h"
 
