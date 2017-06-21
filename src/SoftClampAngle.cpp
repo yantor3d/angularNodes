@@ -25,7 +25,7 @@ namespace illmill {
     const double s = sin(45 * (M_PI / 180.0));
     const double t = tan(22.5 * (M_PI / 180.0));
 
-    const double softMax(const double &v, const double &mx, const double &sft) {
+    double softMax(double v, double mx, double sft) {
         const double r = sft / (s * t);
         if (v < (mx - ((s - t) * r)))
             return v;
@@ -34,7 +34,7 @@ namespace illmill {
         return mx + (r * (cos(asin(((mx - v) / r) + t)))) - r;
     }
 
-    const double softMin(const double &v, const double &mn, const double &sft) {
+    double softMin(double v, double mn, double sft) {
         const double r = sft / (s * t);
         if (v > (mn + ((s - t) * r)))
             return v;
@@ -43,7 +43,7 @@ namespace illmill {
         return mn - (r * (cos(asin(((mn - v) / r) - t)))) + r;
     }
 
-    const double softClamp(const double &v, const double &mn, const double &mnS, const double &mx, const double &mxS) {
+    double softClamp(double v, double mn, double mnS, double mx, double mxS) {
         return (mx < mn) ? softMax(softMin(v, mx, mxS), mn, mnS)
                          : softMax(softMin(v, mn, mnS), mx, mxS);
     }

@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.6)
 # Download Chad Vernon's cgcmake package (https://github.com/chadmv/cgcmake/)
 # and make sure your CMAKE_MODULES_PATH environment variable points at it.
 
-set(CMAKE_MODULE_PATH "$ENV{CMAKE_MODULE_PATH}")
+set(CMAKE_MODULE_PATH /media/miller/BAGHEERA/cadaver/CMAKE)
     
 project(angularNodes)   
     file(GLOB SOURCE_FILES "src/*.cpp" "src/*.h")
