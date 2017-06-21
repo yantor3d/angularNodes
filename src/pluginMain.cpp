@@ -39,6 +39,7 @@ the need for a unit conversion node in most cases.
 #include "n_angleScalarOp.h"
 #include "n_angleUnaryOp.h"
 #include "n_clampAngle.h"
+#include "SoftClampAngle.h"
 
 #include <maya/MFnPlugin.h>
 #include <maya/MTypeId.h>
@@ -49,6 +50,7 @@ const char* kVERSION = "1.0.0";
 const char* kREQUIRED_API_VERSION = "Any";
 
 MString ClampAngleNode::kNODE_NAME =        "clampAngle";
+MString SoftClampAngleNode::kNODE_NAME =    "softClampAngle";
 MString AngleBinaryOpNode::kNODE_NAME =     "angleBinaryOp";
 MString AngleMultiOpNode::kNODE_NAME =      "angleMultiOp";
 MString AngleScalarOpNode::kNODE_NAME =     "angleScalarOp";
@@ -59,6 +61,10 @@ MTypeId AngleMultiOpNode::kNODE_ID =        0x00126b13;
 MTypeId AngleScalarOpNode::kNODE_ID =       0x00126b14;
 MTypeId AngleUnaryOpNode::kNODE_ID =        0x00126b15;
 MTypeId ClampAngleNode::kNODE_ID =          0x00126b16;
+
+MTypeId SoftClampAngleNode::kNODE_ID =      0x00121BD8;
+
+// Travis Miller Node ID, feel free to change
 
 #define REGISTER_NODE(NODE)                    \
     status = fnPlugin.registerNode(            \
@@ -85,6 +91,7 @@ MStatus initializePlugin(MObject obj)
     REGISTER_NODE(AngleScalarOpNode);
     REGISTER_NODE(AngleUnaryOpNode);
     REGISTER_NODE(ClampAngleNode);
+    REGISTER_NODE(SoftClampAngleNode);
 
     return MS::kSuccess;
 }
@@ -99,6 +106,7 @@ MStatus uninitializePlugin(MObject obj)
     DEREGISTER_NODE(AngleScalarOpNode);
     DEREGISTER_NODE(AngleUnaryOpNode);
     DEREGISTER_NODE(ClampAngleNode);
+    DEREGISTER_NODE(SoftClampAngleNode);
 
     return MS::kSuccess;
 }
