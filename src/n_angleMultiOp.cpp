@@ -92,10 +92,10 @@ MStatus AngleMultiOpNode::compute(const MPlug& plug, MDataBlock& data)
 
     MArrayDataHandle inputArrayHandle = data.inputValue(aInput);
     
-    uint numInputs = inputArrayHandle.elementCount();
+    unsigned numInputs = inputArrayHandle.elementCount();
     std::vector<double> inputs(numInputs);
 
-    for (uint i = 0; i < numInputs; i++)
+    for (unsigned i = 0; i < numInputs; i++)
     {
         inputs[i] = inputArrayHandle.inputValue().asAngle().asDegrees();
         if (!inputArrayHandle.next()) continue;
