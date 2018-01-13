@@ -10,6 +10,7 @@ You may use, distribute, or modify this code under the terms of the MIT license.
 //-----------------------------------------------------------------------------
 
 #define NOMINMAX
+#define _USE_MATH_DEFINES
 
 #include "n_clampAngle.h"
 #include "node.h"
