@@ -1,4 +1,4 @@
-#### angularNodes (version 1.0.0)
+#### angularNodes (version 1.0.1)
 Maya plugin with nodes for performing calculates on doubleAngle values without polluting the scene with unitConversion nodes.
 
 #### Description

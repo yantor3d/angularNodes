@@ -45,7 +45,7 @@ the need for a unit conversion node in most cases.
 #include <maya/MString.h>
 
 const char* kAUTHOR = "Ryan Porter";
-const char* kVERSION = "1.0.0";
+const char* kVERSION = "1.0.1";
 const char* kREQUIRED_API_VERSION = "Any";
 
 MString ClampAngleNode::kNODE_NAME =        "clampAngle";
